@@ -201,9 +201,29 @@ Each time a function runs, a Lexical Environment is created, which contains:
         Local memory (variables, functions declared inside it)
 
         A reference to the outer Lexical Environment (where it was defined)
+Keyword | Hoisted | Initialized at compile time? | Access before declaration
+var | Yes | Yes (initialized with undefined) | Allowed (returns undefined)
+let | Yes | No | Not allowed (TDZ error)
+const | Yes | No | Not allowed (TDZ error)
 
 
-Keyword	Hoisted	Initialized at compile time?	Access before declaration
-var	Yes	Yes (initialized with undefined)	Allowed (returns undefined)
-let	Yes	No	Not allowed (TDZ error)
-const	Yes	No	Not allowed (TDZ error)
+
+--------hoisting in let and const keys------
+
+
+
+Keyword | Hoisted |   Initialized at compile time? | Access before declaration
+var |     Yes |       Yes (initialized with undefined) | Allowed (returns undefined)
+let |     Yes |       No | Not allowed (TDZ error)
+const |   Yes |       No | Not allowed (TDZ error)
+
+
+
+let and const are hoisted but not initialized.
+
+This creates a Temporal Dead Zone, where the variable exists but cannot be used.
+
+Accessing the variable inside the TDZ throws a ReferenceError.
+
+Always declare variables before using them to avoid TDZ issues.
+
