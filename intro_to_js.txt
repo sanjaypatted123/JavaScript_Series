@@ -69,7 +69,10 @@ call, apply, bind |             Explicitly defined object
 
 
 
-📌 Shortest JavaScript Program
+--------------Shortest JavaScript Program-----------
+
+
+
 The shortest valid JavaScript program is:
 
 javascript
@@ -93,7 +96,12 @@ No code → no memory allocation or execution.
 
 Program ends without error.
 
- Loosely Typed Language in JavaScript
+
+
+
+-------Loosely Typed Language in JavaScript----------
+
+
 What does loosely typed mean?
 JavaScript is a loosely typed or dynamically typed language.
 This means variables are not bound to a specific data type when declared.
