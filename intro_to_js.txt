@@ -202,3 +202,8 @@ Each time a function runs, a Lexical Environment is created, which contains:
 
         A reference to the outer Lexical Environment (where it was defined)
 
+
+Keyword	Hoisted	Initialized at compile time?	Access before declaration
+var	Yes	Yes (initialized with undefined)	Allowed (returns undefined)
+let	Yes	No	Not allowed (TDZ error)
+const	Yes	No	Not allowed (TDZ error)
