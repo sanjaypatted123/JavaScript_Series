@@ -1,0 +1,3 @@
+✅ 1. Hoisting in JavaScript
+Definition:
+Hoisting is JavaScript's default behavior of moving declarations (not initializations) to the top of the current scope (script or function).
