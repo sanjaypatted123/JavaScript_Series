@@ -227,3 +227,5 @@ Accessing the variable inside the TDZ throws a ReferenceError.
 
 Always declare variables before using them to avoid TDZ issues.
 
+
+
