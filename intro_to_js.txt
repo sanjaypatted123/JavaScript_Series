@@ -77,9 +77,7 @@ call, apply, bind |             Explicitly defined object
 
 The shortest valid JavaScript program is:
 
-javascript
-Copy
-Edit
+
 (Yes—an empty file.)
 
 ✅ Why is it valid?
