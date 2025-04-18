@@ -1,3 +1,123 @@
 ✅ 1. Hoisting in JavaScript
 Definition:
-Hoisting is JavaScript's default behavior of moving declarations (not initializations) to the top of the current scope (script or function).
+Hoisting is JavaScript's default behavior of moving declarations (not initializations) 
+to the top of the current scope (script or function).
+
+ex:
+
+console.log(x); // undefined
+var x = 5;
+
+greet();        // "Hello!"
+function greet() {
+  console.log("Hello!");
+}
+
+console.log(y); // ReferenceError: Cannot access 'y' before initialization
+let y = 10;
+
+
+
+✅ 2. Execution Context in JavaScript
+Definition:Execution Context is the environment in which JavaScript code is evaluated and executed.
+There are three types:
+1. Global Execution Context (GEC) – created when the file/script starts.
+2. Function Execution Context (FEC) – created each time a function is called.
+3. Eval Execution Context – for code inside eval() (not commonly used).
+
+🔁 Execution Phases:
+Every execution context goes through two phases:
+1️⃣ Creation Phase
+* Hoisting happens here.
+* A memory space is created for variables and functions.
+* Variables declared with var are set to undefined.
+* Functions are fully stored.
+* let and const go into TDZ (Temporal Dead Zone).
+2️⃣ Execution Phase
+* Code is executed line-by-line.
+* Variables are assigned values.
+* Functions are invoked.
+
+
+
+
+Feature	                Hoisted	        Initialized	            Access Before Declaration
+var	                    ✅	            undefined	            ✅ (returns undefined)
+let / const	            ✅	            ❌ (TDZ)	               ❌ (ReferenceError)
+Function Decl.	        ✅	            ✅	                    ✅
+Function Expr./Arrow	✅	            ❌ (as undefined)	    ❌ (TypeError if called)
+
+
+
+📌 this in JavaScript
+Definition:The this keyword refers to the object that is executing the current function.
+
+
+
+Context |                       this Refers To
+Global scope |                  Global object (window or global)
+Regular function |              Global object (non-strict) or undefined
+Object method |                 The object calling the method
+Arrow function |                Lexical (parent) scope
+Constructor function |          Newly created instance
+call, apply, bind |             Explicitly defined object
+
+
+
+
+📌 Shortest JavaScript Program
+The shortest valid JavaScript program is:
+
+javascript
+Copy
+Edit
+(Yes—an empty file.)
+
+✅ Why is it valid?
+JavaScript doesn’t require a main() function or any specific entry point.
+
+An empty script is still valid and runs without any syntax errors.
+
+The JavaScript engine simply creates the Global Execution Context, does nothing, and exits cleanly.
+
+🔍 Explanation:
+When this runs:
+
+Global Execution Context is created.
+
+No code → no memory allocation or execution.
+
+Program ends without error.
+
+ Loosely Typed Language in JavaScript
+What does loosely typed mean?
+JavaScript is a loosely typed or dynamically typed language.
+This means variables are not bound to a specific data type when declared.
+
+Example:
+javascript
+Copy
+Edit
+let x = 10;      // x is a number
+x = "hello";     // now x is a string
+x = true;        // now x is a boolean
+A single variable can hold different types of values at different times.
+JavaScript determines the type of the variable at runtime.
+
+Key Points:
+Variables can hold any data type.
+
+You do not need to specify the type of variable while declaring it.
+
+Type checking happens during program execution.
+
+JavaScript uses automatic type conversion when needed.
+
+Example of Type Coercion:
+console.log("5" + 1); // Outputs "51" (string concatenation)
+console.log("5" - 1); // Outputs 4   (number subtraction)
+
+
+JavaScript converts data types automatically depending on the operation, 
+which can sometimes lead to unexpected results.
+
