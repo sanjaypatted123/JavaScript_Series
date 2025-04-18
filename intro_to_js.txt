@@ -24,20 +24,22 @@ let y = 10;
 
 ✅ 2. Execution Context in JavaScript
 Definition:Execution Context is the environment in which JavaScript code is evaluated and executed.
-There are three types:
+There are three types:(generally two)
 1. Global Execution Context (GEC) – created when the file/script starts.
 2. Function Execution Context (FEC) – created each time a function is called.
 3. Eval Execution Context – for code inside eval() (not commonly used).
 
 🔁 Execution Phases:
 Every execution context goes through two phases:
-1️⃣ Creation Phase
+1️⃣ Creation Phase(memory)
+
 * Hoisting happens here.
 * A memory space is created for variables and functions.
 * Variables declared with var are set to undefined.
 * Functions are fully stored.
 * let and const go into TDZ (Temporal Dead Zone).
-2️⃣ Execution Phase
+2️⃣ Execution Phase(code)
+
 * Code is executed line-by-line.
 * Variables are assigned values.
 * Functions are invoked.
@@ -45,11 +47,11 @@ Every execution context goes through two phases:
 
 
 
-Feature	                Hoisted	        Initialized	            Access Before Declaration
-var	                    ✅	            undefined	            ✅ (returns undefined)
-let / const	            ✅	            ❌ (TDZ)	               ❌ (ReferenceError)
-Function Decl.	        ✅	            ✅	                    ✅
-Function Expr./Arrow	✅	            ❌ (as undefined)	    ❌ (TypeError if called)
+Feature	                Hoisted	        Initialized	             Access Before Declaration
+var	                    ✅	              undefined	              ✅ (returns undefined)
+let / const	            ✅	              ❌ (TDZ)	               ❌ (ReferenceError)
+Function Decl.	        ✅	              ✅	                     ✅
+Function Expr./Arrow	  ✅	              ❌ (as undefined)	     ❌ (TypeError if called)
 
 
 
@@ -132,4 +134,71 @@ console.log("5" - 1); // Outputs 4   (number subtraction)
 
 JavaScript converts data types automatically depending on the operation, 
 which can sometimes lead to unexpected results.
+
+
+
+------------undefined and not defined-------------
+
+
+These two terms look similar but mean very different things in JavaScript.
+1. Undefined
+  -A variable is declared but not assigned any value.
+  -JavaScript automatically assigns undefined to it.
+  -It also happens if a function does not return anything.
+
+
+2. Not Defined
+  -A variable is used without being declared at all.
+  -JavaScript throws a ReferenceError.
+
+In short
+Undefined means: Variable exists, but no value yet.
+Not defined means: Variable was never declared.
+
+
+--------scope chain in JS--------
+
+
+What is Scope?
+Scope in JavaScript refers to the accessibility of variables—
+where they can be used or referenced in the code.
+
+-There are mainly three types of scope:
+  1.Global Scope
+
+  2.Local/Function Scope
+
+  3.Block Scope (introduced in ES6 with let and const)
+
+
+What is the Scope Chain?
+The scope chain is the mechanism JavaScript uses to look for variables.
+When you try to access a variable, JavaScript looks:
+
+In the current scope.
+If not found, it moves to the outer scope.
+This continues up the chain until the variable is found or the global scope is reached.
+If not found even there, it throws a ReferenceError.
+This chain of nested scopes is called the scope chain.
+
+In JavaScript, "lexical" is often used in terms like:
+
+          -Lexical Scope
+
+          -Lexical Environment
+
+          -Lexical Context
+
+They all relate to how scope is determined based on where code is written, not where it is executed.
+
+Lexical Scope:
+Lexical scope means that the scope of a variable is determined by its location in the source code.
+
+Lexical Environment:
+A Lexical Environment is an internal JavaScript concept.
+Each time a function runs, a Lexical Environment is created, which contains:
+
+        Local memory (variables, functions declared inside it)
+
+        A reference to the outer Lexical Environment (where it was defined)
 
