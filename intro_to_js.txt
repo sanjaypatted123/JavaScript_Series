@@ -227,3 +227,42 @@ Always declare variables before using them to avoid TDZ issues.
 
 
 
+-----------types of errors---------
+
+
+
+1. Syntax Error
+Occurs when the JavaScript code has incorrect syntax.
+more declarations for same variable
+Example:
+if (x > 5 console.log("Hello"));
+Here, the missing parenthesis causes a syntax error.
+
+2. Reference Error
+Happens when trying to access a variable that hasn’t been declared.
+not defined
+Example:
+console.log(myVar);
+If myVar is not declared anywhere, it throws a reference error.
+
+3. Type Error
+Occurs when a value is used in an inappropriate way.
+after const keyword is used and declared with other value
+Example:
+null.toString();
+You can’t call a method on null, so this will cause a type error.
+
+
+
+--------------closures-------------
+
+
+
+A closure is the combination of a function bundled together (enclosed) with 
+references to its surrounding state (the lexical environment). 
+In other words, a closure gives a function access to its outer scope. 
+In JavaScript, closures are created every time a function is created, at function creation time.
+
+
+
+
