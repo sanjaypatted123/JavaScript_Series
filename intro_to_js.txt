@@ -227,6 +227,8 @@ Always declare variables before using them to avoid TDZ issues.
 
 
 
+>>>>>>>>>>>>>>      19th April'25      <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
 -----------types of errors---------
 
 
@@ -247,7 +249,7 @@ If myVar is not declared anywhere, it throws a reference error.
 
 3. Type Error
 Occurs when a value is used in an inappropriate way.
-after const keyword is used and declared with other value
+ex: after const keyword is used and declared with other value
 Example:
 null.toString();
 You can’t call a method on null, so this will cause a type error.
@@ -392,7 +394,7 @@ Event listeners not removed after DOM elements are deleted
 
 
 
-------closure and garbage-----------
+------closure and garbage connection-----------
 
 
 
