@@ -342,7 +342,7 @@ GitHub	/search/repositories?q=react
 
 
 
-----------minimum keyword results----------
+----------minimum keyword results:----------
 
 
  What Is Minimum Keyword Length in Search APIs?
