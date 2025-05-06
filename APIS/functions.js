@@ -100,20 +100,36 @@
 // },initialValue);
 
 
-//giving the largest number in a array
+// //giving the largest number in a array
 
-function largestNumber(){
-    let inp=prompt('enter the numbers by comma separation:');
-    let arr=inp.split(',').map(Number);
+// function largestNumber(){
+//     let inp=prompt('enter the numbers by comma separation:');
+//     let arr=inp.split(',').map(Number);
 
-    let larg=arr.reduce(function(acc,curr){
-        if (curr > acc) {
-            return curr;
-        } else {
-            return acc;
-        }
+//     let larg=arr.reduce(function(acc,curr){
+//         if (curr > acc) {
+//             return curr;
+//         } else {
+//             return acc;
+//         }
         
-    },0);
-    console.log(larg);
+//     },0);
+//     console.log(larg);
+// }
+// largestNumber();
+
+//to reverse a string 
+
+
+function revString(inp){
+    let rev='';
+    for (let i =inp.length-1; i>=0; i--) {
+        rev+=inp[i];    
+    }
+    console.log(`reversed string is: ${rev}`);
+
+
+    
+
 }
-largestNumber();
+revString(prompt('enter a string'));
