@@ -135,7 +135,7 @@ function revString(inp){
 revString(prompt('enter a string'));
 
 
-//timing functions in js 
+//timing functions practice in js 
 
 //setTimeout: it just executes the function after specified time
 //ex:
@@ -236,3 +236,4 @@ setTimeout(() => {
     console.log(`you took ${(end-start)/1000} seconds`)
     
 }, (Math.random()*3+2)*1000);
+
