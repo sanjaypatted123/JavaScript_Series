@@ -207,3 +207,32 @@ let action=setInterval(() => {
     clearInterval(action);
     }
 }, 1000);
+
+//loading display message
+messages=[
+    'loading...',
+    'still working...',
+    'almost done...',
+    'done !!!'
+
+]
+messages.forEach((msg,index) => {
+    setTimeout(() => {
+        console.log(msg)     
+    }, 1500*(index+1)); 
+});
+
+//just showinh how fast user types the enter button:
+
+window.onload=function () {
+    console.log('Get ready...')
+    
+};
+setTimeout(() => {
+    console.log('Now! Press Enter!')
+    let start=Date.now();
+    prompt('press enter has fast has you can');
+    let end=Date.now();
+    console.log(`you took ${(end-start)/1000} seconds`)
+    
+}, (Math.random()*3+2)*1000);
